@@ -1,49 +1,60 @@
 <!doctype html>
 <html lang="pl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA - Galeria Kotów</title>
-    
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#db4938">
+
+    <link rel="apple-touch-startup-image" href="images/iPhone_11_Pro_Max_iPhone_XS_Max_portrait.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)">
+    <link rel="apple-touch-startup-image" href="images/iPhone_11_iPhone_XR_portrait.png"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="images/iPhone_11_Pro_iPhone_XS_iPhone_X_portrait.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+    <link rel="apple-touch-startup-image" href="images/12.9__iPad_Pro_portrait.png"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <nav class="navbar">
-        <a href="#home">Strona Główna</a>
-        <a href="#galeria">Galeria Memów</a>
+        <div class="nav-container">
+            <a href="#home" class="nav-link">Strona Główna</a>
+            <a href="#galeria" class="nav-link">Galeria</a>
+        </div>
     </nav>
 
-    <div class="container">
+    <main class="main-container">
         <section id="home" class="content-section">
             <h1 class="title">Witaj w PWA Koty!</h1>
-            <p>To jest aplikacja demonstracyjna wykonana w ramach Laboratorium 3.</p>
-            <div class="image-box">
-                <img src="images/kot1.jpg" alt="Mój pierwszy kot" id="main-cat">
+            <p class="subtitle">Aplikacja chmurowa z obsługą trybu offline.</p>
+            <div class="card">
+                <img src="images/kot.png" alt="Mój pierwszy kot" class="meme-img">
             </div>
         </section>
-
-        <hr>
 
         <section id="galeria" class="content-section">
-            <h2>Galeria Towarzyszy</h2>
-            <p>Punkt 14: Rozbudowa o dodatkowe grafiki i treści.</p>
-            <div class="image-box">
-                <img src="images/kot2.jpg" alt="Drugi kot do galerii" id="gallery-cat">
+            <h1 class="title">Towarzysze</h1>
+            <p class="subtitle">Dodatkowa treść zapisana w pamięci podręcznej.</p>
+            <div class="card">
+                <img src="images/kot2.png" alt="Drugi kot do galerii" class="meme-img">
             </div>
-            <p class="description">
-                Te koty są zapisywane w pamięci Cache, dzięki czemu zobaczysz je nawet bez internetu!
-            </p>
         </section>
-    </div>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

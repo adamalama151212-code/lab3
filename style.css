@@ -1,37 +1,123 @@
+:root {
+    --primary-color: #db4938;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Nowoczesny Navbar */
+.navbar {
+    background: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    gap: 30px;
 }
 
-.container {
-    text-align: center;
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
-.title {
-    color: #db4938;
-    font-size: 2.5rem;
-    /* Animacja fadeIn */
-    animation: fadeIn 2s ease-in;
+.nav-link:hover {
+    color: var(--primary-color);
 }
 
-#image-container img {
-    max-width: 150px;
+/* Główny Kontener */
+.main-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.8s ease-out;
+    /* Punkt 10 [cite: 214, 217] */
+}
+
+.content-section:target {
+    display: block;
+}
+
+#home:not(:target) {
+    display: block;
+}
+
+/* Estetyka Karty z Obrazkiem */
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     margin-top: 20px;
 }
 
+.meme-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Animacja [cite: 217, 222] */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsywność dla mobile */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
     }
 }
