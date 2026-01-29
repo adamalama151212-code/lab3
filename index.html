@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="pl">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA PIAC TEST</title>
-
+    <title>PWA - Galeria Kotów</title>
+    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
 
@@ -17,18 +15,35 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <nav class="navbar">
+        <a href="#home">Strona Główna</a>
+        <a href="#galeria">Galeria Memów</a>
+    </nav>
+
     <div class="container">
-        <main>
-            <h1 class="title">Moja Aplikacja PWA</h1>
-            <p>To jest aplikacja wykonana zgodnie z Laboratorium 3.</p>
-            <div id="image-container">
-                <img src="images/web-app-manifest-192x192.png" alt="Logo PWA">
+        <section id="home" class="content-section">
+            <h1 class="title">Witaj w PWA Koty!</h1>
+            <p>To jest aplikacja demonstracyjna wykonana w ramach Laboratorium 3.</p>
+            <div class="image-box">
+                <img src="images/kot1.jpg" alt="Mój pierwszy kot" id="main-cat">
             </div>
-        </main>
+        </section>
+
+        <hr>
+
+        <section id="galeria" class="content-section">
+            <h2>Galeria Towarzyszy</h2>
+            <p>Punkt 14: Rozbudowa o dodatkowe grafiki i treści.</p>
+            <div class="image-box">
+                <img src="images/kot2.jpg" alt="Drugi kot do galerii" id="gallery-cat">
+            </div>
+            <p class="description">
+                Te koty są zapisywane w pamięci Cache, dzięki czemu zobaczysz je nawet bez internetu!
+            </p>
+        </section>
     </div>
+
     <script src="js/main.js"></script>
 </body>
-
 </html>
