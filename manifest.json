@@ -1,0 +1,24 @@
+{
+    "name": "PIAC TEST Laboratory",
+    "short_name": "PIAC",
+    "description": "Przykładowa aplikacja PWA na zajęcia PIAC",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#db4938",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "images/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
